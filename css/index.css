@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --dark_violet: #130620;
+    --soft_violet: #260D40;
+    --white_violet: #655575;
+    --orange: #ED7E00;
+    --soft-orange: #F4B266;
+    --white: #F1F1F1;
+    --gray: #727272;
+}
+header{
+    height: 56px;
+    background-color: var(--soft_violet);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 4px 2px rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+header img{
+    width: 35px;
+    color: var(--white);
+}
+.presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark_violet);
+    padding-top: 45px;
+    height: 882px;
+    position: relative;
+    top: 56px;
+}
+h2{
+    color: var(--white);
+    font-size: 2.0rem;
+    font-weight: 300;
+}
+.h2_span--orange{
+    color: var(--orange);
+    font-weight: 400;
+}
+.presentation .logo{
+    margin: 12px 0 26px 0;
+}
+.presentation .description {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+    width: 72%;
+    margin-bottom: 26px;
+}
+.presentation .portfolio-button{
+    background-color: var(--dark_violet);
+    color: var(--white);
+    border-radius: 4px;
+    border: 1px solid var(--white);
+    height: 36px;
+    width: 196px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 34px;
+    transition: .2s;
+}
+.presentation .portfolio-button:hover{
+    background-color: var(--orange);
+    border: none;
+}
+.presentation .photo{
+    width: 218px;
+}
+.presentation .about-me{
+    position: absolute;
+    background-color: var(--soft_violet);
+    height: 570px;
+    width: 88%;
+    top: calc(100% - 270px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 0;
+}
+.presentation .about-me h3{
+    color: var(--orange);
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+.about-me_description{
+    text-align: justify;
+    color: var(--white);
+    font-weight: 300;
+    font-size: 1.4rem;
+    width: 85%;
+}
+.download_cv{
+    width: 195px;
+    height: 38px;
+    background-color: var(--orange);
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+}
+.social-media{
+    height: 524px;
+    background-color: var(--white);
+    padding-top: 380px;
+}
+.social-media h4{
+    color: var(--orange);
+    font-weight: 500;
+    font-size: 2.2rem;
+    text-align: center;
+    font-style: italic;
+}
+.social-media .bar_decoration{
+    background-color: var(--soft_violet);
+    width: 40%;
+    height: 2px;
+    margin: auto;
+    margin-top: 5px;
+}
+.social-media_icon{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 20px auto 0;
+    justify-content: space-around;
+    align-items: center;
+}
+footer{
+    height: 38px;
+    background-color: var(--dark_violet);
+    padding: 8px;
+}
+footer p{
+    color: var(--white);
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-align: center;
+}
