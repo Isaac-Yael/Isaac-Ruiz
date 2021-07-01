@@ -9,14 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav id="nav">
+        <img src="./img/cross.svg" alt="" id="closeMenu">
+        <ul>
+            <a href="./index.html"><li>Inicio</li></a>
+            <a href="./portfolio.html"><li>Portafolio</li></a>
+            <a href=""><li>Contáctame</li></a>
+        </ul>
+    </nav>
     <header>
-        <img src="./img/menu.svg" alt="Icono de menu">
+        <img src="./img/menu.svg" alt="Icono de menu" id="burger">
     </header>
     <section class="presentation">
         <h2><span class="h2_span--orange">¡Hola!</span> Mi nombre es</h2>
         <img src="./img/version1.svg" alt="" class="logo">
         <p class="description">Diseñador y Artista Visual multidisciplinario con un amplio conocimiento en la ejecución de proyectos gráficos, audiovisuales y lógicos programables.</p>
-        <button class="portfolio-button">Mi Portafolio</button>
+        <a href="./portfolio.html"><button class="portfolio-button">Mi Portafolio</button></a>
         <img src="./img/photo.png" alt="Foto de Isaac" class="photo">
         <div class="about-me">
             <h3>SOBRE MI</h3>
@@ -33,13 +41,14 @@
         <h4>Encuéntrame en</h4>
         <div class="bar_decoration"></div>
         <div class="social-media_icon">
-            <img src="./img/github.svg" alt="">
-            <img src="./img/behance.svg" alt="">
-            <img src="./img/linkedin.svg" alt="">
+            <a href="https://github.com/Isaac-Yael"><img src="./img/github.svg" alt=""></a>
+            <a href="https://www.behance.net/isaac_yael_rg"><img src="./img/behance.svg" alt=""></a>
+            <a href="https://www.linkedin.com/feed/"><img src="./img/linkedin.svg" alt=""></a>
         </div>
     </section>
     <footer>
-        <p>Isaac Ruiz 2021</p>
+        <p>©Isaac Ruiz 2021</p>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 </html>
