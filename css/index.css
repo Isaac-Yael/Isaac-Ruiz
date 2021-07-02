@@ -93,7 +93,7 @@ h2{
 .presentation .description {
     color: var(--white);
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 300;
     width: 72%;
     margin-bottom: 26px;
@@ -120,7 +120,7 @@ h2{
 .presentation .about-me{
     position: absolute;
     background-color: var(--soft_violet);
-    height: 570px;
+    height: auto;
     width: 88%;
     top: calc(100% - 270px);
     border-radius: 10px;
@@ -134,13 +134,15 @@ h2{
     color: var(--orange);
     font-weight: 500;
     font-size: 2.4rem;
+    margin-bottom: 14px;
 }
 .about-me_description{
     text-align: justify;
     color: var(--white);
     font-weight: 300;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     width: 85%;
+    margin-bottom: 18px;
 }
 .download_cv{
     width: 195px;
@@ -190,4 +192,10 @@ footer p{
     font-weight: 300;
     font-size: 1.4rem;
     text-align: center;
+}
+
+@media screen and (min-width: 540px) {
+    .presentation .about-me {
+        height: auto;
+    }
 }
