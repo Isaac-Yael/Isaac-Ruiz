@@ -226,6 +226,7 @@ body::-webkit-scrollbar-thumb{
     transform: translateY(-100%);
     background-color: var(--white);
     z-index: 10;
+    border-top-right-radius: 150px;
 }
 .relleno2{
     position: absolute;
@@ -578,6 +579,7 @@ footer p{
     .relleno{
         width: 300px;
         height: 300px;
+        border-top-right-radius: 300px;
     }
     .relleno2{
         width: 300px;
