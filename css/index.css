@@ -133,7 +133,7 @@ body::-webkit-scrollbar-thumb{
     overflow: hidden;
 }
 .animation--container_slider{
-    animation: slide_words 10s ease-in-out infinite alternate;
+    animation: slide_words 8s ease-in-out infinite alternate;
 }
 .word_animation{
     height: 50px;
@@ -150,11 +150,12 @@ body::-webkit-scrollbar-thumb{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom-left-radius: 120px;
 }
 .about-me_container{
     margin-bottom: 40px;
 }
-.about-me h2{
+.about-me h2, .h3_portafolio{
     color: var(--orange);
     font-size: 4.0rem;
     font-weight: 500;
@@ -207,7 +208,140 @@ body::-webkit-scrollbar-thumb{
     max-width: 80px;
     margin: 15px;
 }
-
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 20px;
+    background-color: var(--white);
+    border-top-right-radius: 120px;
+    position: relative;
+}
+.relleno{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    transform: translateY(-100%);
+    background-color: var(--white);
+    z-index: 10;
+}
+.relleno2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    transform: translateY(-100%);
+    background-color: var(--dark);
+    z-index: 11;
+    border-bottom-left-radius: 200px;
+}
+.graphic-design p{
+    font-size: 2.0rem;
+    font-weight: 500;
+    color: var(--gray);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.portfolio-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.portfolio-slider img{
+    width: 90%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: -4px 4px 6px 0px rgba(15, 80, 124, 0.25);
+    cursor: pointer;
+}
+.contacto{
+    padding: 40px 20px 20px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-descript{
+    color: var(--gray);
+    font-size: 2rem;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-text h4{
+    color: #3b3b3b;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+.form-place{
+    font-size: 1.8rem;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+.form{
+    width: 85%;
+    max-width: 710px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 40px;
+    background-color: rgb(223, 223, 223);
+    margin-top: 16px;
+}
+.form p{
+    color: gray;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 100%;
+}
+.form input{
+    outline: none;
+    border: solid 2px #c4c4c4;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 18px;
+    padding: 4px 10px;
+}
+.form .mensaje{
+    height: 150px;
+}
+.form button{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: orange;
+    color: var(--white);
+    width: 90%;
+    padding: 14px 20px;
+    font-size: 2rem;
+    font-weight: 400;
+    border-radius: 12px;
+}
+footer{
+    width: 100%;
+    background-color: var(--dark);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer p{
+    color: var(--white);
+    font-weight: 300;
+    font-size: 2rem;
+}
 @keyframes top-line-animation{
     50%, 100%{
         margin: 0 auto;
@@ -342,7 +476,11 @@ body::-webkit-scrollbar-thumb{
         align-items: center;
     }
     #menu-2 li:hover{
-        background-color: var(--white_violet);
+        background-color: var(--white);
+    }
+    #menu-2 li:hover a{
+        color: rgba(19, 19, 19, 0.507);
+        font-weight: 500;
     }
     #menu-2 a{
         text-decoration: none;
@@ -365,11 +503,25 @@ body::-webkit-scrollbar-thumb{
     .about-me .isaac-photo{
         width: 65%;
     }
+    .graphic-design p{
+        font-size: 2.2rem;
+        margin-bottom: 26px;
+    }
+    .portfolio-slider{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .portfolio-slider img{
+        margin-right: 20px;
+        max-width: 350px;
+    }
 }
 @media screen and (min-width: 1200px){
     .degraded_radial{
         width: 500px;
         height: 500px;
+        opacity: 20%;
     }
     .home_item{
         font-size: 2.8rem;
@@ -408,9 +560,12 @@ body::-webkit-scrollbar-thumb{
         text-align: right;
         padding-left: 100px;
     }
+    .skill_parent p{
+        font-size: 1.7rem;
+    }
     .skills_container{
         display: grid;
-        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+        grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
         width: 300px;
     }
     .about-me_container p{
@@ -419,5 +574,34 @@ body::-webkit-scrollbar-thumb{
     .about-me .isaac-photo{
         width: 100%;
         max-width: 350px;
+    }
+    .relleno{
+        width: 300px;
+        height: 300px;
+    }
+    .relleno2{
+        width: 300px;
+        height: 300px;
+        border-bottom-left-radius: 300px;
+    }
+    .portfolio{
+        border-top-right-radius: 300px;
+    }
+    .contacto{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 50px 250px;
+    }
+    .contact-text{
+        align-items: flex-start;
+    }
+    .contact-text h3, .contact-text h4, .contact-text .form-place{
+        text-align: left;
+        width: 100%;
+    }
+    .form-descript, .contact-text h4, .contact-text .form-place{
+        width: 80%;
+        text-align: left;
     }
 }
