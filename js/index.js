@@ -1,13 +1,11 @@
-const closeMenu = document.getElementById('closeMenu')
-const burger = document.getElementById('burger')
-const nav = document.getElementById('nav')
-
-const closeMenuWithCross = () => {
-    nav.classList.remove('nav-flex')
-}
-const openBurger = () => {
-    nav.classList.add('nav-flex')
-}
-
-closeMenu.addEventListener('click', closeMenuWithCross)
-burger.addEventListener('click', openBurger)
+const nav = document.querySelector('#hamburger button')
+const menu = document.getElementById('menu')
+nav.addEventListener('click', e => {
+    nav.classList.toggle('open')
+    if(nav.classList == "open"){
+        menu.style.display = 'flex'
+    } else {
+        menu.style.display = 'none'
+    }
+    
+})

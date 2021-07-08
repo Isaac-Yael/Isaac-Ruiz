@@ -8,7 +8,7 @@ html{
     font-size: 62.5%;
 }
 :root{
-    --dark_violet: #130620;
+    --dark: #0F0B14;
     --soft_violet: #260D40;
     --white_violet: #655575;
     --orange: #ED7E00;
@@ -16,186 +16,340 @@ html{
     --white: #F1F1F1;
     --gray: #727272;
 }
-header{
-    height: 56px;
-    background-color: var(--soft_violet);
+body{
+    background-color: var(--dark);
+}
+#hamburger {
     position: fixed;
-    width: 100%;
     z-index: 100;
-    box-shadow: 0 4px 4px 2px rgba(0, 0, 0, .2);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 20px;
+    right: 25px;
+    top: 35px;
 }
-header img{
-    width: 35px;
-    color: var(--white);
+#hamburger button{
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    background-color: var(--white);
+    border-radius: 50%;
+    outline: none;
 }
-nav{
-    position: absolute;
-    background-color: var(--soft_violet);
-    height: 100%;
-    width: 70vw;
-    left: calc(100%);
-    transition: .2s;
-    padding: 50px 20px;
-    z-index: 20000;
+#hamburger button span{
+    border-radius: 5px;
+    background-color: var(--dark);
+    display: block;
+    width: 60%;
+    height: 3px;
+    margin: 5px auto;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#hamburger button.open .top_line{
+    animation-name: top-line-animation;
+}
+#hamburger button.open .middle_line{
+    animation-name: middle-line-animation;
+}
+#hamburger button.open .bottom_line{
+    animation-name: bottom-line-animation;
+}
+#hamburger button .top_line{
+    animation-name: top-line-animation-close;
+}
+#hamburger button .middle_line{
+    animation-name: middle-line-animation-close;
+}
+#hamburger button .bottom_line{
+    animation-name: bottom-line-animation-close;
+}
+#menu{
     display: none;
     flex-direction: column;
-    align-items: flex-end;
-}
-.nav-flex{
-    display: flex;
-    left: calc(30%);
-    transition: .2s;
-}
-nav img{
-    width: 25px;
-    margin-bottom: 30px;
-}
-nav ul{
-    width: 100%;
-    padding: 10px 10px;
-}
-nav ul a{
-    text-decoration: none;
-}
-nav ul li{
-    color: var(--white);
-    font-size: 2.0rem;
-    line-height: 4rem;
-    list-style-type: none;
-    text-align: right;
-}
-.presentation{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--dark_violet);
-    padding-top: 45px;
-    height: 882px;
-    position: relative;
-    top: 56px;
-}
-h2{
-    color: var(--white);
-    font-size: 2.0rem;
-    font-weight: 300;
-}
-.h2_span--orange{
-    color: var(--orange);
-    font-weight: 400;
-}
-.presentation .logo{
-    margin: 12px 0 26px 0;
-}
-.presentation .description {
-    color: var(--white);
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: 300;
-    width: 72%;
-    margin-bottom: 26px;
-}
-.presentation .portfolio-button{
-    background-color: var(--dark_violet);
-    color: var(--white);
-    border-radius: 4px;
-    border: 1px solid var(--white);
-    height: 36px;
-    width: 196px;
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 34px;
-    transition: .2s;
-}
-.presentation .portfolio-button:hover{
-    background-color: var(--orange);
-    border: none;
-}
-.presentation .photo{
-    width: 218px;
-}
-.presentation .about-me{
     position: absolute;
-    background-color: var(--soft_violet);
-    height: auto;
-    width: 88%;
-    top: calc(100% - 270px);
+    background-color: var(--white);
+    padding: 20px 30px 20px 80px;
     border-radius: 10px;
+    left: 100%;
+    top: 115%;
+    transform: translateX(-100%);
+    transition: .5s;
+}
+#menu li{
+    color: var(--gray);
+    list-style: none;
+    font-size: 1.8rem;
+    text-align: end;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+#menu-2{
+    display: none;
+}
+.home{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    background-color: var(--dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.degraded_radial{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(57, 86, 157, 0.25) 0%, rgba(57, 86, 157, 0) 100%);
+    opacity: 70%;
+}
+.home_item{
+    color: var(--white);
+    margin: 20px 0;
+    font-weight: 300;
+    font-size: 2.0rem;
+}
+.home_item--orange{
+    color: var(--orange);
+}
+.logo{
+    margin-bottom: 10px;
+}
+.home_animation--container{
+    height: 50px;
+    overflow: hidden;
+}
+.animation--container_slider{
+    animation: slide_words 12s ease-in-out infinite alternate;
+}
+.word_animation{
+    height: 50px;
+    color: var(--white);
+    font-size: 2.0rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-me{
+    background-color: var(--dark);
+    padding: 10px 40px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    padding: 16px 0;
 }
-.presentation .about-me h3{
+.about-me_container{
+    margin-bottom: 40px;
+}
+.about-me h2{
     color: var(--orange);
+    font-size: 4.0rem;
     font-weight: 500;
-    font-size: 2.4rem;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
 }
-.about-me_description{
-    text-align: justify;
+.about-me p{
     color: var(--white);
-    font-weight: 300;
     font-size: 1.6rem;
-    width: 85%;
-    margin-bottom: 18px;
+    font-weight: 300;
+    text-align: justify;
+    margin-bottom: 20px;
 }
-.download_cv{
-    width: 195px;
-    height: 38px;
+.about-me .cv{
     background-color: var(--orange);
+    border-radius: 10px;
+    padding: 10px 20px;
     color: var(--white);
-    border-radius: 4px;
     font-weight: 400;
     font-size: 1.8rem;
     border: none;
     outline: none;
+    cursor: pointer;
 }
-.social-media{
-    height: 524px;
-    background-color: var(--white);
-    padding-top: 380px;
+.about-me .isaac-photo{
+    width: 90%;
+    border-radius: 12px;
 }
-.social-media h4{
-    color: var(--orange);
+.skills{
+    
+    margin: 30px 0;
+}
+.skills h3{
+    color: var(--white);
+    font-size: 3.0rem;
     font-weight: 500;
-    font-size: 2.2rem;
     text-align: center;
-    font-style: italic;
 }
-.social-media .bar_decoration{
-    background-color: var(--soft_violet);
-    width: 40%;
-    height: 2px;
-    margin: auto;
-    margin-top: 5px;
-}
-.social-media_icon{
+.skills_container{
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
-    margin: 20px auto 0;
     justify-content: space-around;
-    align-items: center;
+    max-width: 430px;
 }
-footer{
-    height: 38px;
-    background-color: var(--dark_violet);
-    padding: 8px;
-}
-footer p{
-    color: var(--white);
-    font-weight: 300;
-    font-size: 1.4rem;
-    text-align: center;
+.skills_container img{
+    max-width: 80px;
+    margin: 15px;
 }
 
-@media screen and (min-width: 540px) {
-    .presentation .about-me {
-        height: auto;
+@keyframes top-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+}
+@keyframes bottom-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+}
+@keyframes middle-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        opacity: 0;
+        width: 0;
+    }
+}
+@keyframes top-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+    50%, 100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+@keyframes bottom-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+    50%, 100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+@keyframes middle-line-animation-close{
+    0%{
+        margin: 0 auto;
+        opacity: 0;
+        width: 0;
+    }
+    50%, 100%{
+        margin: 5px auto;
+        opacity: 100%;
+        width: 60%;
+    }
+}
+@keyframes slide_words{
+    0%{
+        transform: translateY(0px);
+    }
+    10%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-60px);
+    }
+    25%{
+        transform: translateY(-50px);
+    }
+    35%{
+        transform: translateY(-50px);
+    }
+    45%{
+        transform: translateY(-110px);
+    }
+    50%{
+        transform: translateY(-100px);
+    }
+    60%{
+        transform: translateY(-100px);
+    }
+    70%{
+        transform: translateY(-160px);
+    }
+    75%{
+        transform: translateY(-150px);
+    }
+    80%{
+        transform: translateY(-150px);
+    }
+    95%{
+        transform: translateY(-210px);
+    }
+    100%{
+        transform: translateY(-200px);
+    }
+}
+@media screen and (min-width: 769px) {
+    #hamburger{
+        display: none;
+    }
+    #menu-2{
+        display: block;
+        position: fixed;
+        z-index: 200;
+        width: 100%;
+        padding: 25px 20px;
+        background-color: var(--dark);
+    }
+    #menu-2 ul{
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        max-width: 545px;
+        margin: auto;
+    }
+    #menu-2 li{
+        list-style: none;
+        font-size: 1.7rem;
+    }
+    #menu-2 a{
+        text-decoration: none;
+        color: var(--white);
+    }
+    .about-me_container{
+        border: solid 2px var(--white);
+        border-radius: 10px;
+        padding: 40px;
+        position: relative;
+        width: 80%;
+        max-width: 700px;
+    }
+    .cv{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .about-me .isaac-photo{
+        width: 65%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .about-me{
+        display: grid;
+        grid-template: 1fr / 2fr 1fr;
+        align-items: center;
+        justify-items: center;
+        grid-gap: 20px;
+        padding: 0 100px;
+        max-width: 1440px;
+        margin: auto;
+    }
+    .about-me_container{
+        margin-bottom: 0;
+        padding: 40px;
+        width: 100%;
+    }
+    .about-me_container p{
+        line-height: 2.4rem;
+    }
+    .about-me .isaac-photo{
+        width: 100%;
+        max-width: 350px;
     }
 }
