@@ -32,6 +32,7 @@ body::-webkit-scrollbar-thumb{
     z-index: 100;
     right: 25px;
     top: 35px;
+    border-radius: 50%;
 }
 #hamburger button{
     background: none;
@@ -142,6 +143,10 @@ body::-webkit-scrollbar-thumb{
     right: 30px;
     width: 60px;
     cursor: pointer;
+    transition: .2s;
+}
+.close_lightbox:hover{
+    transform: scale(1.2);
 }
 .home{
     display: flex;
@@ -161,9 +166,25 @@ body::-webkit-scrollbar-thumb{
     background: radial-gradient(50% 50% at 50% 50%, rgba(57, 86, 157, 0.25) 0%, rgba(57, 86, 157, 0) 100%);
     opacity: 70%;
 }
+.social-media{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+}
+.social-media img{
+    margin: 0 14px;
+    transition: .2s;
+    opacity: 90%;
+}
+.social-media img:hover{
+    transform: scale(1.2);
+}
 .home_item{
     color: var(--white);
-    margin: 20px 0;
+    margin-bottom: 10px;
     font-weight: 300;
     font-size: 2.0rem;
 }
@@ -171,7 +192,7 @@ body::-webkit-scrollbar-thumb{
     color: var(--orange);
 }
 .logo{
-    margin-bottom: 10px;
+    margin: 10px 0 10px;
 }
 .home_animation--container{
     height: 50px;

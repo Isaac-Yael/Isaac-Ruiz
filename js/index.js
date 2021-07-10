@@ -10,6 +10,7 @@ let itemMenu4 = document.querySelector('#menu-2 ul li:nth-child(4)')
 const oshito = document.getElementById('oshito')
 const burger = document.getElementById('burger')
 const vazper = document.getElementById('vazper')
+const dmpm = document.getElementById('dmpm')
 const lightbox = document.querySelector('.lightbox')
 const closeLightbox = document.querySelector('.close_lightbox')
 const lightboxContainer = document.querySelector('.lightbox-container')
@@ -80,6 +81,13 @@ vazper.addEventListener('click', () =>{
     let img = document.createElement('img')
     lightboxContainer.appendChild(img)
     img.src = './img/vazper_presentation.jpg'
+    img.classList.add('lightbox-container-img')
+})
+dmpm.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/dmpm_presentation.jpg'
     img.classList.add('lightbox-container-img')
 })
 closeLightbox.addEventListener('click', () => {
