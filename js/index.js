@@ -7,11 +7,17 @@ let itemMenu1 = document.querySelector('#menu-2 ul li:nth-child(1)')
 let itemMenu2 = document.querySelector('#menu-2 ul li:nth-child(2)')
 let itemMenu3 = document.querySelector('#menu-2 ul li:nth-child(3)')
 let itemMenu4 = document.querySelector('#menu-2 ul li:nth-child(4)')
-
+const oshito = document.getElementById('oshito')
+const burger = document.getElementById('burger')
+const vazper = document.getElementById('vazper')
+const lightbox = document.querySelector('.lightbox')
+const closeLightbox = document.querySelector('.close_lightbox')
+const lightboxContainer = document.querySelector('.lightbox-container')
 
 const options = {
     threshold: 1
 }
+
 function callback(entries){
     entries.forEach(entry => {
         if(entry.isIntersecting) {
@@ -49,4 +55,35 @@ nav.addEventListener('click', e => {
     } else {
         menu.style.display = 'none'
     }
+})
+
+const openLightbox = () => {
+    lightbox.classList.add('lightbox_display')
+}
+
+oshito.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/oshito_presentation.jpg'
+    img.classList.add('lightbox-container-img')
+})
+burger.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/family_presentation.jpg'
+    img.classList.add('lightbox-container-img')
+})
+vazper.addEventListener('click', () =>{
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/vazper_presentation.jpg'
+    img.classList.add('lightbox-container-img')
+})
+closeLightbox.addEventListener('click', () => {
+    const nodoAEliminar = document.querySelector('.lightbox-container-img')
+    nodoAEliminar.remove()
+    lightbox.classList.remove('lightbox_display')
 })

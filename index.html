@@ -17,24 +17,29 @@
         </button>
         <nav id="menu">
             <ul>
-                <li>Inicio</li>
-                <li>Sobre Mí</li>
-                <li>Portafolio</li>
-                <li>Contacto</li>
-                <li>Blog</li>
+                <a href="#home"><li>Inicio</li></a>
+                <a href="#about_section"><li>Sobre Mí</li></a>
+                <a href="#portfolio"><li>Portafolio</li></a>
+                <a href="#contact"><li>Contacto</li></a>
+                <a href=""><li>Blog</li></a>
             </ul>
         </nav>
     </div>
     <nav id="menu-2">
         <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Sobre Mí</a></li>
-            <li><a href="">Portafolio</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about_section">Sobre Mí</a></li>
+            <li><a href="#portfolio">Portafolio</a></li>
+            <li><a href="#contact">Contacto</a></li>
             <li><a href="">Blog</a></li>
         </ul>
     </nav>
-    <section class="home">
+    <div class="lightbox">
+        <div class="lightbox-container">
+            <img src="./img/close_lightbox.svg" alt="" class="close_lightbox">
+        </div>
+    </div>
+    <section class="home" id="home">
         <div class="degraded_radial" id="inicio"></div>
         <div class="home_item"><span class="home_item--orange">¡Hola!</span> Mi nombre es</div>
         <img src="./img/version1.svg" alt="" class="logo">
@@ -48,7 +53,7 @@
             </div>
         </div>
     </section>
-    <section class="about-me">
+    <section class="about-me" id="about_section">
         <div class="about-me_container" id="inicio">
             <h2>Sobre Mí</h2>
             <p>Soy egresado de la carrera de Diseño y Comunicación Visual en la UNAM. Comencé mi carrera como diseñador gráfico a mediados del 2016 hasta que dos años después me fui especializando en la programación web y el desarrollo de aplicaciones. 
@@ -56,7 +61,7 @@
             Me considero una persona que constantemente está mejorando sus habilidades, desarrollando nuevos talentos, y que por sobre todo nunca para de aprender. Entre mis aficiones están la fotografía, la música y la post-producción audiovisual, que en conjunto me han servido en la profundización de mis principales disciplinas.
             <br><br>
             Busco por sobre todo trabajar implementando todos mis conocimientos  y así desenvolver mis habilidades en un ambiente retador y estimulante.</p>
-            <button class="cv">Descarga Mi CV</button>
+            <a href="./docs/isaac_ruiz_cv.pdf" download="isaac_ruiz_cv" class="a_cv"><button class="cv">Descarga Mi CV</button></a>
         </div>
         <img src="./img/isaac.jpg" alt="" class="isaac-photo">
         <div class="skills">
@@ -75,28 +80,28 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="relleno"></div>
         <div class="relleno2"></div>
         <h3 class="h3_portafolio">Mi Portafolio</h3>
         <div class="graphic-design">
             <p>Diseño Gráfico | Branding</p>
             <div class="portfolio-slider">
-                <img src="./img/oshito_portada.jpg" alt="Portada de Oshito">
-                <img src="./img/family_portada.jpg" alt="Portada de family burgers">
-                <img src="./img/vazper.jpg" alt="Portada de vazper">
+                <img src="./img/oshito_portada.jpg" alt="Portada de Oshito" id="oshito">
+                <img src="./img/family_portada.jpg" alt="Portada de family burgers" id="burger">
+                <img src="./img/vazper.jpg" alt="Portada de vazper" id="vazper">
             </div>
         </div>
         <div class="graphic-design">
             <p>Diseño y Desarrollo Web</p>
             <div class="portfolio-slider" id="inicio">
-                <img src="./img/dmp_branding_Portada.jpg" alt="Portada de Oshito">
-                <img src="./img/dmp_branding_Portada.jpg" alt="Portada de family burgers">
-                <img src="./img/dmp_branding_Portada.jpg" alt="Portada de vazper">
+                <img src="./img/dmp_branding_Portada.jpg" alt="Portada de Oshito" class="img_portfolio" id="oshito">
+                <img src="./img/dmp_branding_Portada.jpg" alt="Portada de family burgers" class="img_portfolio" id="burger">
+                <img src="./img/dmp_branding_Portada.jpg" alt="Portada de vazper" class="img_portfolio" id="vazper">
             </div>
         </div>
     </section>
-    <section class="contacto">
+    <section class="contacto" id="contact">
         <div class="contact-text" id="inicio">
             <h3 class="h3_portafolio">Contáctame</h3>
             <p class="form-descript">Llena el formulario para enviarme un mensaje</p>

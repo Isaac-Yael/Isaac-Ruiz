@@ -6,6 +6,7 @@
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 :root{
     --dark: #0F0B14;
@@ -42,6 +43,7 @@ body::-webkit-scrollbar-thumb{
     background-color: var(--white);
     border-radius: 50%;
     outline: none;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
 }
 #hamburger button span{
     border-radius: 5px;
@@ -82,6 +84,7 @@ body::-webkit-scrollbar-thumb{
     top: 115%;
     transform: translateX(-100%);
     transition: .5s;
+    box-shadow: -2px 2px 4px 2px rgba(0, 0, 0, 0.1);
 }
 #menu li{
     color: var(--gray);
@@ -91,12 +94,54 @@ body::-webkit-scrollbar-thumb{
     margin-bottom: 12px;
     font-weight: 500;
 }
+#menu ul a{
+    text-decoration: none;
+}
 .intersection{
     border: solid 2px var(--orange);
     border-radius: 6px;
 }
 #menu-2{
     display: none;
+}
+.lightbox{
+    position: fixed;
+    display: none;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    transform-origin: center;
+    transform: scale(0);
+    transition: .5s;
+    z-index: 600;
+}
+.lightbox_display{
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+.lightbox-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    align-items: center;
+}
+.lightbox-container-img{
+    width: 85%;
+    border-radius: 16px;
+}
+.close_lightbox{
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    width: 60px;
+    cursor: pointer;
 }
 .home{
     display: flex;
@@ -212,7 +257,7 @@ body::-webkit-scrollbar-thumb{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px 20px;
+    padding: 60px 20px 20px;
     background-color: var(--white);
     border-top-right-radius: 120px;
     position: relative;
@@ -455,7 +500,7 @@ footer p{
     #menu-2{
         display: block;
         position: fixed;
-        z-index: 200;
+        z-index: 400;
         width: 100%;
         padding: 25px 20px;
         background-color: var(--dark);
@@ -512,10 +557,21 @@ footer p{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        transition: .3s;
+    }
+    .portfolio-slider:hover img{
+        opacity: .5;
     }
     .portfolio-slider img{
         margin-right: 20px;
         max-width: 350px;
+        transition: .4s;
+    }
+    .portfolio-slider img:hover{
+        transform-origin: center;
+        transform: scale(1.2);
+        z-index: 300;
+        opacity: 1;
     }
 }
 @media screen and (min-width: 1200px){
@@ -539,7 +595,7 @@ footer p{
         align-items: center;
         justify-items: center;
         grid-gap: 20px;
-        padding: 0 100px;
+        padding: 80px 100px 0;
         max-width: 1440px;
         margin: auto;
     }
@@ -588,6 +644,7 @@ footer p{
     }
     .portfolio{
         border-top-right-radius: 300px;
+        padding-top: 100px;
     }
     .contacto{
         flex-direction: row;
@@ -605,5 +662,8 @@ footer p{
     .form-descript, .contact-text h4, .contact-text .form-place{
         width: 80%;
         text-align: left;
+    }
+    .lightbox-container-img{
+        width: 60%;
     }
 }
