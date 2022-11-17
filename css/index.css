@@ -224,7 +224,7 @@ body::-webkit-scrollbar-thumb{
 .about-me h2, .h3_portafolio{
     color: var(--orange);
     font-size: 4.0rem;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 .about-me p{
@@ -305,6 +305,13 @@ body::-webkit-scrollbar-thumb{
     z-index: 11;
     border-bottom-left-radius: 200px;
 }
+.graphic-design{
+    padding: 40px 0px 0px;
+}
+.other_white{
+    background-color: rgb(247, 247, 247);
+    width: 100%;
+}
 .graphic-design p{
     font-size: 2.0rem;
     font-weight: 500;
@@ -312,18 +319,26 @@ body::-webkit-scrollbar-thumb{
     margin-bottom: 20px;
     text-align: center;
 }
+.graphic-design p span{
+    color: rgb(63, 63, 63);
+    font-weight: 700;
+}
 .portfolio-slider{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
+    padding: 0 30px;
 }
 .portfolio-slider img{
-    width: 90%;
+    width: 300px;
     margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: -4px 4px 6px 0px rgba(15, 80, 124, 0.25);
+    border-radius: 6px;
+    /* box-shadow: -4px 4px 6px 0px #F1F1F1; */
     cursor: pointer;
+}
+.marggin_add{
+    margin: 0px 30px;
 }
 .contacto{
     padding: 40px 20px 20px;

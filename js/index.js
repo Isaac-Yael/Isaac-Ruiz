@@ -10,7 +10,16 @@ let itemMenu4 = document.querySelector('#menu-2 ul li:nth-child(4)')
 const oshito = document.getElementById('oshito')
 const burger = document.getElementById('burger')
 const vazper = document.getElementById('vazper')
+const provertech = document.getElementById('provertech')
+const water = document.getElementById('water')
+const freak = document.getElementById('freak')
+const clash = document.getElementById('clash')
+const oshito_p = document.getElementById('oshito_p')
 const dmpm = document.getElementById('dmpm')
+const aurora = document.getElementById('aurora')
+const body = document.getElementById('body')
+const comida = document.getElementById('comida')
+const arboledas = document.getElementById('arboledas')
 const lightbox = document.querySelector('.lightbox')
 const closeLightbox = document.querySelector('.close_lightbox')
 const lightboxContainer = document.querySelector('.lightbox-container')
@@ -83,11 +92,75 @@ vazper.addEventListener('click', () =>{
     img.src = './img/vazper_presentation.jpg'
     img.classList.add('lightbox-container-img')
 })
+provertech.addEventListener('click', () =>{
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/provertech_brand-01.jpg'
+    img.classList.add('lightbox-container-img')
+})
+water.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/water_woman.jpg'
+    img.classList.add('lightbox-container-img')
+})
+oshito_p.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/oshito.jpg'
+    img.classList.add('lightbox-container-img')
+})
+freak.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/freak_mockup.jpg'
+    img.classList.add('lightbox-container-img')
+})
+clash.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/the_clash.jpg'
+    img.classList.add('lightbox-container-img')
+})
 dmpm.addEventListener('click', () => {
     openLightbox()
     let img = document.createElement('img')
     lightboxContainer.appendChild(img)
     img.src = './img/dmpm_presentation.jpg'
+    img.classList.add('lightbox-container-img')
+})
+
+body.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/body-02.jpg'
+    img.classList.add('lightbox-container-img')
+})
+arboledas.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/arboledas-02.jpg'
+    img.classList.add('lightbox-container-img')
+})
+aurora.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/aurora-02.jpg'
+    img.classList.add('lightbox-container-img')
+})
+comida.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/comida-02.jpg'
     img.classList.add('lightbox-container-img')
 })
 closeLightbox.addEventListener('click', () => {
