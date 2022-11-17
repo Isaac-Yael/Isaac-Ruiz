@@ -153,6 +153,7 @@ body::-webkit-scrollbar-thumb{
     width: 60px;
     cursor: pointer;
     transition: .2s;
+    z-index: 100000;
 }
 .close_lightbox:hover{
     transform: scale(1.2);
@@ -525,7 +526,46 @@ footer p{
         transform: translateY(-200px);
     }
 }
+@media screen and (max-width: 768px){
+    .lightbox-container-img{
+        width: 100%;
+    }
+    .lightbox-container::-webkit-scrollbar{
+        display: none;
+    }
+    .close_lightbox{
+        right: 50%;
+        transform: translateX(30px);
+    }
+    .lightbox-container{
+        padding-top: 0;
+        padding-bottom: 0px;
+        margin-bottom: 0;
+        width: 85%;
+    }
+    .lightbox{
+        padding-top: 60px;
+    }
+}
 @media screen and (min-width: 769px) {
+    .lightbox-container{
+        padding-bottom: 0px;
+        margin-bottom: 0;
+        width: 85%;
+    }
+    .close_lightbox{
+        right: 50%;
+        transform: translateX(30px);
+    }
+    .lightbox-container-img{
+        width: 80%;
+    }
+    .lightbox-container::-webkit-scrollbar{
+        display: none;
+    }
+    .lightbox{
+        padding-top: 60px;
+    }
     .degraded_radial{
         width: 500px;
         height: 500px;
