@@ -20,6 +20,7 @@ const aurora = document.getElementById('aurora')
 const body = document.getElementById('body')
 const comida = document.getElementById('comida')
 const arboledas = document.getElementById('arboledas')
+const sweed = document.getElementById('sweed')
 const lightbox = document.querySelector('.lightbox')
 const closeLightbox = document.querySelector('.close_lightbox')
 const lightboxContainer = document.querySelector('.lightbox-container')
@@ -139,31 +140,44 @@ body.addEventListener('click', () => {
     openLightbox()
     let img = document.createElement('img')
     lightboxContainer.appendChild(img)
-    img.src = './img/body-02.jpg'
+    img.src = './img/body-01.jpg'
     img.classList.add('lightbox-container-img')
 })
 arboledas.addEventListener('click', () => {
     openLightbox()
     let img = document.createElement('img')
     lightboxContainer.appendChild(img)
-    img.src = './img/arboledas-02.jpg'
+    img.src = './img/temozon_park.png'
     img.classList.add('lightbox-container-img')
 })
 aurora.addEventListener('click', () => {
     openLightbox()
     let img = document.createElement('img')
     lightboxContainer.appendChild(img)
-    img.src = './img/aurora-02.jpg'
+    img.src = './img/aurora-01.jpg'
     img.classList.add('lightbox-container-img')
 })
 comida.addEventListener('click', () => {
     openLightbox()
     let img = document.createElement('img')
     lightboxContainer.appendChild(img)
-    img.src = './img/comida-02.jpg'
+    img.src = './img/tulipanesw-01.jpg'
+    img.classList.add('lightbox-container-img')
+})
+sweed.addEventListener('click', () => {
+    openLightbox()
+    let img = document.createElement('img')
+    lightboxContainer.appendChild(img)
+    img.src = './img/presentacion_sweed.jpg'
     img.classList.add('lightbox-container-img')
 })
 closeLightbox.addEventListener('click', () => {
+    const nodoAEliminar = document.querySelector('.lightbox-container-img')
+    nodoAEliminar.remove()
+    lightbox.classList.remove('lightbox_display')
+})
+
+lightbox.addEventListener("click", () => {
     const nodoAEliminar = document.querySelector('.lightbox-container-img')
     nodoAEliminar.remove()
     lightbox.classList.remove('lightbox_display')
